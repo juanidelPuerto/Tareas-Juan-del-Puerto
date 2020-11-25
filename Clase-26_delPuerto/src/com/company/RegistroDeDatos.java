@@ -37,7 +37,8 @@ public class RegistroDeDatos {
 
         System.out.println("Ingrese su edad, Por favor.");
         String edad_ingresada = ingreso.next();
-        System.out.println("La edad que ingresó es: " + edad_ingresada);
+        int edad_insertar = Integer.parseInt(edad_ingresada);
+        System.out.println("La edad que ingresó es: " + edad_insertar);
 
         System.out.println("Ingrese su ocupacion, Por favor.");
         String ocupacion_ingresada = ingreso.next();
@@ -49,7 +50,7 @@ public class RegistroDeDatos {
             @Override
             public void mouseClicked(MouseEvent e) {
 
-                Persona persona_ingresar = new Persona(nombre_ingresado,apellido_ingresado,edad_ingresada,ocupacion_ingresada);
+                Persona persona_ingresar = new Persona(nombre_ingresado,apellido_ingresado,edad_insertar,ocupacion_ingresada);
                 personas.add(persona_ingresar);
                 texto.setText("Registro Exitoso");
             }

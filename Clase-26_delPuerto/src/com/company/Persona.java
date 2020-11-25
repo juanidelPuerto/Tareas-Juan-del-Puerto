@@ -4,14 +4,14 @@ public class Persona {
 
     private String nombre;
     private String apellido;
-    private String edad;
+    private int edad;
     private int dni;
     private int telefono;
     private String direccion;
     private String ocupacion;
 
 
-    public Persona(String nombre, String edad, int dni, int telefono, String direccion) {
+    public Persona(String nombre, int edad, int dni, int telefono, String direccion) {
         this.nombre = nombre;
         this.edad = edad;
         this.dni = dni;
@@ -19,7 +19,7 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public Persona(String nombre, String apellido, String edad, String ocupacion) {
+    public Persona(String nombre, String apellido, int edad, String ocupacion) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -28,7 +28,7 @@ public class Persona {
 
     public Persona(){
         nombre="Juan";
-        edad="25";
+        edad=25;
         dni=12345678;
         telefono=1567894321;
         direccion="Ezeiza 1111";
@@ -54,11 +54,19 @@ public class Persona {
         return dni;
     }
 
-    public String getEdad() {
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
